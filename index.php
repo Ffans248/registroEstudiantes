@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Login</title>
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="styles.css">
 
 </head>
 
@@ -12,19 +12,24 @@
   <!-- partial:index.partial.html -->
   <div id="bg"></div>
 
-  <form action="validar.php" method="POST">
-    <h1>PANEL DE ADMINITRADOR</h1>
+  <form action="" method="POST">
+  <?php 
+  include("conexiondb.php");
+  include("validar.php");
+   ?>
+  
+    <h1>PANEL DE ADMINISTRADOR</h1>
     <div class="form-field">
-      <input type="email" placeholder="Email / Username" required />
+      <input type="text" placeholder="Email / Username" name="usuario"  />
     </div>
 
     <div class="form-field">
-      <input type="password" placeholder="Password" required />
+      <input type="password" placeholder="Password" name="pass"  />
     </div>
 
 
     <div class="form-field">
-      <button class="btn" type="submit">Iniciar Sesion</button>
+      <button class="btn" type="submit" name="log">Iniciar Sesion</button>
     </div>
   </form>
   <!-- partial -->
@@ -32,5 +37,3 @@
 </body>
 
 </html>
-<?php
-$_SESSION; ?>
