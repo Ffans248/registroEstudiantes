@@ -46,7 +46,11 @@ if ($varsession == null || $varsession == '') {
       <th scope="col">Telefono</th>
       <th scope="col">Grado</th>
       <th scope="col">Carrera</th>
-      <th scope="col">Acciones</th>
+      <th scope="col">id Alumno</th>
+      <th scope="col">id Administrador</th>
+      <th scope="col">Usuario Administrador</th>
+      <th scope="col">Cambio que realizó</th>
+      
     </tr>
   </thead>
   <tbody>
@@ -71,10 +75,7 @@ if(!$conn){
             echo "<td>" . $row['telefono'] . "</td>";
             echo "<td>" . $row['grado'] . "</td>";
             echo "<td>" . $row['carrera'] . "</td>";
-            ?>
-            <td> <a href="actualizar.php?id=<?php echo $row['id']; ?>&primernombre=<?php echo urlencode($row['primernombre']); ?>&segundonombre=<?php echo urlencode($row['segundonombre']); ?>&tercernombre=<?php echo urlencode($row['tercernombre']); ?>&primerapellido=<?php echo urlencode($row['primerapellido']); ?>&segundoapellido=<?php echo urlencode($row['segundoapellido']); ?>&telefono=<?php echo urlencode($row['telefono']); ?>&grado=<?php echo urlencode($row['grado']); ?>&carrera=<?php echo urlencode($row['carrera']); ?>"><i class="bi bi-pencil"></i></button></a>
-            <a href="eliminar.php?id=<?php echo $row['id']; ?>&primernombre=<?php echo urlencode($row['primernombre']); ?>&segundonombre=<?php echo urlencode($row['segundonombre']); ?>&tercernombre=<?php echo urlencode($row['tercernombre']); ?>&primerapellido=<?php echo urlencode($row['primerapellido']); ?>&segundoapellido=<?php echo urlencode($row['segundoapellido']); ?>&telefono=<?php echo urlencode($row['telefono']); ?>&grado=<?php echo urlencode($row['grado']); ?>&carrera=<?php echo urlencode($row['carrera']); ?>"><i class="bi bi-trash"></i></button></a></td>
-            <?php
+            
             echo "</tr>";
         }
     }

@@ -1,3 +1,15 @@
+<?php
+session_start();
+error_reporting(0);
+$varsession= $_SESSION['usuario'];
+if ($varsession==null||$varsession='') {
+
+    session_destroy();
+    // die();
+}else{
+  header("location:registrar.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 

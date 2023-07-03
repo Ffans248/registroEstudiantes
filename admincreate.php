@@ -14,7 +14,7 @@ if(!$conn){
     $carrera = $_POST['carrera'];
    
 
-    $sql = "INSERT INTO alumnos (primernombre, segundonombre,tercernombre,primerapellido, segundoapellido, telefono, grado, carrera)
+    $sql = "INSERT INTO historial (primernombre, segundonombre,tercernombre,primerapellido, segundoapellido, telefono, grado, carrera)
     VALUE ('$Pnombre', '$Snombre', '$Tnombre', '$Papellido', '$Sapellido', '$telefono','$grado','$carrera')";
 
     if(mysqli_query($conn, $sql)){

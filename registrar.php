@@ -1,3 +1,12 @@
+<?php 
+session_start();
+// error_reporting(0);
+$varsession = $_SESSION['usuario'];
+$sessionID = $_SESSION['id'];
+if ($varsession == null || $varsession == '') {
+    header("Location:index.php");
+    die();
+}; ?>
 <!doctype html>
 <html lang="en">
 
@@ -7,10 +16,26 @@
     <title>Registrar alumnos</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles2.css">
 </head>
 
 <body>
-    <form action="nuevoalumno.php" method="POST">
+<div style="position:fixed; left:1.5%; top:2%; font-size:100%"> <a class="nav-link dropdown-toggle" href="#"
+            role="button" data-bs-toggle="dropdown" aria-expanded="false"><i href="#"
+                class="glyphicon glyphicon-user"></i>
+            <?php echo $_SESSION['usuario']; ?>
+        </a>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="listado.php">Lista de estudiantes</a></li>
+            <li><a class="dropdown-item" href="historial.php">Historial de Cambios</a></li>
+            <li>
+                <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item text-danger" href="cerrar_session.php">Cerrar sesión</a></li>
+        </ul>
+    </div>
+   <div class="mb-3 text-center"><h1>Formulario de registro de estudiantes</h1></div> 
+    <form action="nuevoalumno.php"  method="POST">
     <div style="margin: 15px;">
     <div class="mb-3" >
         <label for="PNombre" class="form-label">Primer nombre:</label>
