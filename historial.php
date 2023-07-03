@@ -61,7 +61,7 @@ include("conexiondb.php");
 if(!$conn){
     die("La conexión fallo: " . mysqli_connect_error());
 }else{
-    $sql = "SELECT * FROM alumnos";
+    $sql = "SELECT * FROM historial";
     $resultado = mysqli_query($conn, $sql);
     if($resultado){
         while($row = $resultado->fetch_array()){
@@ -75,7 +75,10 @@ if(!$conn){
             echo "<td>" . $row['telefono'] . "</td>";
             echo "<td>" . $row['grado'] . "</td>";
             echo "<td>" . $row['carrera'] . "</td>";
-            
+            echo "<td>" . $row['fk_alumnos'] . "</td>";
+            echo "<td>" . $row['fk_administracion'] . "</td>";
+            echo "<td>" . $row['administracion_usuario'] . "</td>";
+            echo "<td>" . $row['action'] . "</td>";
             echo "</tr>";
         }
     }
