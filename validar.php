@@ -1,5 +1,5 @@
 <?php
-
+include("conexiondb.php");
 $usuario =$_POST['usuario'];
 $pass =$_POST['pass'];
 
@@ -16,7 +16,7 @@ if (!empty($_POST["log"])) {
             $_SESSION['usuario']=$usuario;
             $_SESSION['id']=$datos->id;
             
-        header("Location:Feed2.php"); 
+        header("Location:registrar.php"); 
         exit();   
         } else {
             echo '<div class="text-danger">El usuario no existe</div>'; 

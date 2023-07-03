@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <title>Login</title>
   <link rel="stylesheet" href="styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
 
 </head>
 
@@ -13,10 +15,7 @@
   <div id="bg"></div>
 
   <form action="" method="POST">
-  <?php 
-  include("conexiondb.php");
-  include("validar.php");
-   ?>
+
   
     <h1>PANEL DE ADMINISTRADOR</h1>
     <div class="form-field">
@@ -29,11 +28,18 @@
 
 
     <div class="form-field">
-      <button class="btn" type="submit" name="log">Iniciar Sesion</button>
+      <input class="btn" type="submit" name="log" value="Iniciar sesion">
     </div>
+    <?php 
+  include("conexiondb.php");
+  include("validar.php");
+   ?>
   </form>
   <!-- partial -->
 
 </body>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous">
+    </script>
 </html>
