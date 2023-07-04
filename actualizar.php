@@ -57,7 +57,7 @@
             <div class="mb-3">
                 <label for="carrera" class="form-label">Carrera:</label>
                 <select class="form-select form-select-lg mb-3" name="carrera" id="carrera" value="<?php echo $carrera;?>">
-                    <option value="P    rimaria">Primaria</option>
+                    <option value="Primaria">Primaria</option>
                     <option value="Basico">Básico</option>
                     <option value="Computacion">Computación</option>
                     <option value="Dibujo">Dibujo</option>

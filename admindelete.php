@@ -22,7 +22,7 @@ if(!$conn){
    
 
     $sql2 = "INSERT INTO historial (primernombre, segundonombre,tercernombre,primerapellido, segundoapellido, telefono, grado, carrera, fk_alumnos, fk_administracion, administracion_usuario, action)
-    VALUE ('$primernombre', '$segundonombre', '$tercernombre', '$primerapellido', '$segundoapellido', '$telefono','$grado','$carrera', '$id','$sessionID','$varsession', 'Eliminó un usuario'   )";
+    VALUE ('$primernombre', '$segundonombre', '$tercernombre', '$primerapellido', '$segundoapellido', '$telefono','$grado','$carrera', '$id','$sessionID','$varsession', 'Eliminó un alumno'   )";
 
     if(mysqli_query($conn, $sql2)){
         include("eliminar.php");

@@ -17,6 +17,7 @@ if(!$conn){
     $sql = "UPDATE alumnos SET primernombre= '$Pnombre', segundonombre='$Snombre', tercernombre='$Tnombre', primerapellido='$Papellido', segundoapellido='$Sapellido', telefono='$telefono', grado='$grado', carrera='$carrera'  WHERE id = $clave ";
 
     if(mysqli_query($conn, $sql)){
+        include("adminupdate.php");
         header("Location: listado.php");
     }else{
         echo "Error: " . mysqli_error($conn);

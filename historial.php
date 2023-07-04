@@ -27,7 +27,7 @@ if ($varsession == null || $varsession == '') {
         </a>
         <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="listado.php">Lista de estudiantes</a></li>
-            <li><a class="dropdown-item" href="historial.php">Historial de Cambios</a></li>
+            <li><a class="dropdown-item" href="registrar.php">Registrar Estudiantes</a></li>
             <li>
                 <hr class="dropdown-divider">
             </li>
