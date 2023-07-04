@@ -1,5 +1,5 @@
 <?php
-
+include("sesion.php");
 include("conexiondb.php");
 if(!$conn){
     die("La conexion fallo: ". mysqli_connect_error());

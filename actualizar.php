@@ -1,3 +1,4 @@
+<?php include("sesion.php");; ?>
 <!doctype html>
 <html lang="en">
 
@@ -22,6 +23,7 @@
     $grado = $_GET['grado'];
     $carrera = $_GET['carrera'];
     ?>
+     <div class="mb-3 text-center"><h1>Editar estudiantes</h1></div> 
     <form action="update.php" method="POST">
         <div style="margin: 15px;">
             <div class="mb-3">

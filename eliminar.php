@@ -1,4 +1,5 @@
 <?php 
+include("sesion.php");
 $id =$_GET['id'];
 
 //CONEXION

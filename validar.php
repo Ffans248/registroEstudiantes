@@ -1,4 +1,5 @@
 <?php
+
 include("conexiondb.php");
 $usuario =$_POST['usuario'];
 $pass =$_POST['pass'];

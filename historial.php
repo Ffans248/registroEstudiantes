@@ -20,6 +20,8 @@ if ($varsession == null || $varsession == '') {
 
   </head>
   <body>
+  <div class="mb-3 text-center"><h1>Historial de cambios</h1></div> 
+    </div>
   <div style="position:fixed; left:1.5%; top:2%; font-size:100%"> <a class="nav-link dropdown-toggle" href="#"
             role="button" data-bs-toggle="dropdown" aria-expanded="false"><i href="#"
                 class="glyphicon glyphicon-user"></i>
